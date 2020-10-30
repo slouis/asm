@@ -6,10 +6,10 @@ section .text
 
 start:
     mov     rax, 0x2000004 ; write -- see https://opensource.apple.com/source/xnu/xnu-1504.3.12/bsd/kern/syscalls.master
-    mov     rdi, 1 ; stdout
+    mov     rdi, 1         ; stdout
     mov     rsi, msg
     mov     rdx, msg.len
-    ;syscall
+    syscall
 
     mov     rax, 0x2000001 ; exit
     mov     rdi, 0
